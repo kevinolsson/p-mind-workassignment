@@ -2,6 +2,10 @@
   label {
     display: block;
     margin: vr(1.5) 0;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__title {
@@ -23,7 +27,7 @@
     height: 52px;
     outline: 0;
     overflow: hidden;
-    padding: 0 12px;
+    padding: 0 24px;
     width: 100%;
 
     &:focus {

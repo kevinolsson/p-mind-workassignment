@@ -11,7 +11,8 @@
     "react/prefer-stateless-function": "off",
     "react/no-unused-state" : "off",
     "react/destructuring-assignment" : "off",
-    "jsx-a11y/label-has-for" : "off"
+    "jsx-a11y/label-has-for" : "off",
+    "react/require-default-props" : "off"
   },
   "extends": "airbnb"
 }

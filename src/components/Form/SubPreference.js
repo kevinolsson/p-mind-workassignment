@@ -1,23 +1,59 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import RadioButton from './RadioButton';
 
-const SubPreference = () => (
-  <div className="radio-button">
-    <label htmlFor="security">
-      <input id="security" name="subPreference" value="security" type="radio" />
-      <div className="radio-button__block" />
-      <h4 className="form__title radio-button__title">Security</h4>
-    </label>
-    <label htmlFor="computers">
-      <input id="computers" name="subPreference" value="computers" type="radio" />
-      <div className="radio-button__block" />
-      <h4 className="form__title radio-button__title">Computers</h4>
-    </label>
-    <label htmlFor="games">
-      <input id="games" name="subPreference" value="games" type="radio" />
-      <div className="radio-button__block" />
-      <h4 className="form__title radio-button__title">Games</h4>
-    </label>
-  </div>
-);
+class SubPreference extends React.Component {
+  render() {
+    let array = [];
+    const { preference, subPreference } = this.props.formContent;
+    switch (preference) {
+      case 'IT': {
+        array = ['Security', 'Computers', 'Games'];
+        break;
+      }
+      case 'Fitness': {
+        array = ['Running', 'Walking', 'Jumping'];
+        break;
+      }
+      case 'Bikes': {
+        array = ['One Wheel', 'Two Wheels', 'Three Wheels'];
+        break;
+      }
+      case '3D Printing': {
+        array = ['SLA', 'DLP', 'FDM'];
+        break;
+      }
+      default: {
+        array = [];
+      }
+    }
+
+    return (
+      <div className="radio-button">
+        { array.length === 0 ? null : <h4>I am specifically interested in: *</h4> }
+        {Object.keys(array).map(key => (
+          <RadioButton
+            key={key}
+            subject={array[key]}
+            subPreference={subPreference}
+            formContent={this.props.formContent}
+            updateFormContent={this.props.updateFormContent}
+          />
+        ))}
+      </div>
+    );
+  }
+}
+
+SubPreference.propTypes = {
+  updateFormContent: PropTypes.func,
+  formContent: PropTypes.shape({
+    email: PropTypes.string,
+    preference: PropTypes.string,
+    subPreferenceCheck: PropTypes.bool,
+    subPreference: PropTypes.string,
+  }),
+};
+
 
 export default SubPreference;

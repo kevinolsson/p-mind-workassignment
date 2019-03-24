@@ -5,20 +5,20 @@ import Debugger from './Debugger';
 class App extends React.Component {
   state = {
     formContent: {
-      email: null,
-      preference: null,
+      email: '',
+      preference: '',
       subPreferenceCheck: false,
-      subPreference: null,
+      subPreference: '',
     },
   };
 
-  updateEmail = (value) => {
-    const formContent = { ...this.state.formContent };
-    formContent.email = value;
-    this.setState({
-      formContent: formContent
-    });
-  };
+  updateFormContent = (value) => {
+    let formContent = { ...this.state.formContent };
+    formContent = value;
+    this.setState(
+      prevState => ({ formContent }),
+    );
+  }
 
   render() {
     return (
@@ -29,7 +29,7 @@ class App extends React.Component {
             for our Newsletter
           </h1>
           <p>This is a work assignment for Påmind. Please enter your email address and preferences!</p>
-          <Form updateEmail={this.updateEmail} formContent={this.state.formContent} />
+          <Form updateFormContent={this.updateFormContent} formContent={this.state.formContent} />
           <Debugger formContent={this.state.formContent} />
         </div>
         <div className="app__background" />
