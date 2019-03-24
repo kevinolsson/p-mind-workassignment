@@ -1,0 +1,32 @@
+.button {
+  @include typi("h4");
+  -webkit-appearance: none; //sass-lint:disable-line no-vendor-prefixes
+  border: 0;
+  border-radius: 100px;
+  color: $white;
+  font-family: $serif-stack;
+  height: 76px;
+  margin: vr(1) 0;
+  outline: 0;
+  text-decoration: none;
+  width: 100%;
+
+  &--primary {
+    background-color: $primary;
+  }
+
+  &--secondary {
+    background-color: $secondary;
+  }
+
+  &--tertiary {
+    background-color: $tertiary;
+  }
+
+  &--disabled {
+    $disabled-text: rgba($white, 0.4);
+    background-color: $primary-dark;
+    color: $disabled-text;
+    touch-action: none;
+  }
+}

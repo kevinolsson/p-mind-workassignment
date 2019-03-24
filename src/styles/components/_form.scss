@@ -9,6 +9,10 @@
     font-family: $serif-stack;
     font-weight: 700;
     margin: vr(0.5) 0;
+
+    &--radio {
+      display: inline-block;
+    }
   }
 
   &__input, &__dropdown {

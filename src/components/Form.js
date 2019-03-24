@@ -12,11 +12,11 @@ class Form extends React.Component {
   render() {
     return (
       <form className="form">
-        <Email />
-        <Preference />
+        <Email updateEmail={this.props.updateEmail} email={this.props.formContent.email} />
+        <Preference email={this.props.formContent.email} preference={this.props.formContent.preference} />
         <SubPreferenceToggle />
         <SubPreference />
-        <button className="button button--primary" onClick={this.handleForm} type="submit">Submit</button>
+        <button className="button button--disabled" onClick={this.handleForm} type="submit">Submit</button>
       </form>
     );
   }

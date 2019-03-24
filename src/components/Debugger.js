@@ -3,7 +3,9 @@ import React from 'react';
 class Debugger extends React.Component {
   render() {
     return (
-      <p>Debugger</p>
+      <div className="debugger">
+        Debugger
+      </div>
     );
   }
 }
