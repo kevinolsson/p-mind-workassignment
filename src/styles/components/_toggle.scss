@@ -1,0 +1,47 @@
+.toggle {
+  border-radius: 100px;
+  height: 52px;
+  overflow: hidden;
+  position: relative;
+  width: 94px; //52 * 2 originally. dropped it 10px
+
+  input {
+    height: 0;
+    opacity: 0;
+    width: 0;
+  }
+
+  &__slider {
+    background-color: $primary-dark;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: $transition;
+
+    &::before {
+      background-color: $white;
+      border-radius: 100px;
+      content: "";
+      height: 40px; // 52px - 12px (margin)
+      margin: 6px;
+      position: absolute;
+      transition: $transition;
+      width: 40px;
+    }
+  }
+
+  input:checked + &__slider { //sass-lint:disable-line force-pseudo-nesting
+    background-color: $secondary;
+  }
+
+  input:focus + &__slider { //sass-lint:disable-line force-pseudo-nesting
+    box-shadow: 0 0 1px $secondary;
+  }
+
+  input:checked + &__slider::before { //sass-lint:disable-line force-pseudo-nesting
+    transform: translateX(42px);
+  }
+}

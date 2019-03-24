@@ -1,0 +1,60 @@
+@include normalize;
+@include typi-init;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale; //sass-lint:disable-line no-vendor-prefixes
+  -webkit-font-smoothing: antialiased; //sass-lint:disable-line no-vendor-prefixes
+}
+
+body {
+  background-color: $primary;
+  color: $light;
+  font-family: $sans-serif-stack;
+  margin: 0;
+}
+
+
+h1 {
+  @include typi("h1");
+  font-family: $serif-stack;
+  font-weight: $regular;
+  margin: 0;
+}
+
+h2 {
+  @include typi("h2");
+  font-family: $serif-stack;
+  font-weight: $regular;
+}
+
+h3 {
+  @include typi("h3");
+  font-family: $serif-stack;
+  font-weight: $regular;
+}
+
+h4 {
+  @include typi("h4");
+  font-family: $serif-stack;
+  font-weight: $regular;
+}
+
+h5 {
+  @include typi("h5");
+  font-family: $sans-serif-stack;
+  font-weight: $regular;
+}
+
+p {
+  @include typi("p");
+  font-family: $sans-serif-stack;
+}
+
+small {
+  @include typi("small");
+  font-family: $sans-serif-stack;
+}

@@ -13,7 +13,10 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <div className="app">
-          <h1>Signup for our Newsletter</h1>
+          <h1>
+            <span className="secondary-color">Signup </span>
+            for our Newsletter
+          </h1>
           <p>This is a work assignment for Påmind. Please enter your email address and preferences!</p>
           <Form formContent={this.state.formContent} />
           <Debugger formContent={this.state.formContent} />

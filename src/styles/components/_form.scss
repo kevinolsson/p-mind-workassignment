@@ -1,9 +1,14 @@
 .form {
+  label {
+    display: block;
+    margin: vr(1.5) 0;
+  }
 
   &__title {
     display: block;
     font-family: $serif-stack;
     font-weight: 700;
+    margin: vr(0.5) 0;
   }
 
   &__input, &__dropdown {
@@ -14,6 +19,7 @@
     height: 52px;
     outline: 0;
     overflow: hidden;
+    padding: 0 12px;
     width: 100%;
 
     &:focus {
@@ -31,5 +37,4 @@
       width: 98%;
     }
   }
-
 }

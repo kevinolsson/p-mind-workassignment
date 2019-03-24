@@ -2,8 +2,11 @@ import React from 'react';
 
 const SubPreferenceToggle = () => (
   <label htmlFor="subPreferenceToggle">
-    <span className="form__title">I have a specific interest</span>
-    <input className="form__checkbox" id="subPreferenceToggle" type="checkbox" />
+    <h4 className="form__title">I have a specific interest</h4>
+    <div className="toggle">
+      <input id="subPreferenceToggle" type="checkbox" />
+      <div className="toggle__slider" />
+    </div>
   </label>
 );
 

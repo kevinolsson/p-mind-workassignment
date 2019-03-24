@@ -2,7 +2,7 @@ import React from 'react';
 
 const Preference = () => (
   <label htmlFor="preference">
-    <span className="form__title">Preference:</span>
+    <h4 className="form__title">Preference:</h4>
     <div className="form__dropdown">
       <select defaultValue="" id="preference">
         <option value="" disabled hidden>Select preference</option>

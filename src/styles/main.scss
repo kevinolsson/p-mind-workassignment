@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:400,700"); //sass-lint:disable-line no-url-domains no-url-protocols
 
-// breakpoint slicer
 @import "~breakpoint-sass";
 @import "~breakpoint-slicer";
+@import "~modularscale-sass/stylesheets/modularscale";
+@import "~typi/scss/typi";
+@import "~normalize-scss/sass/normalize"; // sass-lint:disable-line clean-import-paths
 
 @import "variables/*";
 @import "global/*";
 @import "components/*";
+
+@import "utility";
