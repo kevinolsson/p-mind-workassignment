@@ -29,4 +29,8 @@
     color: $disabled-text;
     touch-action: none;
   }
+
+  &--active {
+    @extend .button--secondary;
+  }
 }

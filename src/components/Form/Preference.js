@@ -8,7 +8,7 @@ class Preference extends React.Component {
       email: this.props.formContent.email,
       preference: event.target.value,
       subPreferenceCheck: this.props.formContent.subPreferenceCheck,
-      subPreference: this.props.formContent.subPreference,
+      subPreference: '',
     };
     this.props.updateFormContent(formContent);
   }
