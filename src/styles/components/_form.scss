@@ -1,0 +1,35 @@
+.form {
+
+  &__title {
+    display: block;
+    font-family: $serif-stack;
+    font-weight: 700;
+  }
+
+  &__input, &__dropdown {
+    // -webkit-appearance: none; //sass-lint:disable-line no-vendor-prefixes
+    background-color: $white;
+    border: 2px solid $white;
+    border-radius: 100px;
+    height: 52px;
+    outline: 0;
+    overflow: hidden;
+    width: 100%;
+
+    &:focus {
+      border: 2px solid $secondary;
+    }
+  }
+
+  &__dropdown {
+    select {
+      background: transparent;
+      border: 0;
+      height: 52px;
+      margin: 0 2% 0 0;
+      outline: 0;
+      width: 98%;
+    }
+  }
+
+}

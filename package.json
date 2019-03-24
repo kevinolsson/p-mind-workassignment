@@ -1,7 +1,7 @@
 {
   "name": "react-scss-webpack",
   "version": "1.0.0",
-  "description": "",
+  "description": "Påmind work assignment. Original package based of the react-scss-webpack that I created.",
   "main": "src/index.js",
   "keywords": [],
   "author": "Kevin Olsson",
@@ -13,7 +13,12 @@
   "dependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "breakpoint-sass": "^2.7.1",
+    "breakpoint-slicer": "^2.0.0",
+    "modularscale-sass": "^3.0.8",
+    "normalize-scss": "^7.0.1",
+    "typi": "^3.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -26,8 +31,6 @@
     "@babel/preset-react": "^7.0.0-beta.51",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.0-beta.0",
-    "breakpoint-sass": "^2.7.1",
-    "breakpoint-slicer": "^2.0.0",
     "clean-webpack-plugin": "^2.0.0",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",

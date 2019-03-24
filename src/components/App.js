@@ -1,22 +1,27 @@
 import React from 'react';
-import sample from '../images/sample.png';
+import Form from './Form';
+import Debugger from './Debugger';
 
-const App = () => (
-  <React.Fragment>
-    <h1>Hello World!</h1>
-    <img src={sample} alt="" />
-  </React.Fragment>
-);
+class App extends React.Component {
+  state = {
+    formContent: {
+      hello: true,
+    },
+  };
 
-// class App extends React.Component {
-//   render() {
-//     return(
-//       <React.Fragment>
-//         <h1>Hello World!</h1>
-//         <img src={sample} alt="" />
-//       </React.Fragment>
-//     );
-//   }
-// }
+  render() {
+    return (
+      <React.Fragment>
+        <div className="app">
+          <h1>Signup for our Newsletter</h1>
+          <p>This is a work assignment for Påmind. Please enter your email address and preferences!</p>
+          <Form formContent={this.state.formContent} />
+          <Debugger formContent={this.state.formContent} />
+        </div>
+        <div className="app__background" />
+      </React.Fragment>
+    );
+  }
+}
 
 export default App;
