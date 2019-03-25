@@ -15,9 +15,7 @@ class Debugger extends React.Component {
       <div className="debugger">
         <div className="debugger__content">
           {(this.state !== null)
-            ? (
-              <p>{JSON.stringify(this.state)}</p>
-            )
+            ? <p>{JSON.stringify(this.state)}</p>
             : <p>Output will appear here</p>
           }
         </div>

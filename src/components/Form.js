@@ -18,7 +18,7 @@ class Form extends React.Component {
       <form className="form" onSubmit={this.handleForm}>
         <h1>
           <span className="secondary-color">Signup </span>
-            for our Newsletter
+          for our Newsletter
         </h1>
         <p>This is a work assignment for Påmind. Please enter your email address and preferences!</p>
         <Email
