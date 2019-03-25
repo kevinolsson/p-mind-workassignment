@@ -1,3 +1,23 @@
 .debugger {
-  display: none;
+  background-color: $primary-dark;
+  color: $white;
+  min-height: 300px;
+  position: relative;
+  width: 100%;
+  word-break: break-all;
+
+
+  &__content {
+    @include from(6) {
+      padding: 24px;
+      position: fixed;
+    }
+
+    @include between(3, 5) {
+      margin: 5% auto;
+      max-width: 640px;
+    }
+
+    padding: 12px;
+  }
 }

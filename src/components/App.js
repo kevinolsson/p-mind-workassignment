@@ -22,18 +22,24 @@ class App extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className="wrapper">
         <div className="app">
           <h1>
             <span className="secondary-color">Signup </span>
             for our Newsletter
           </h1>
           <p>This is a work assignment for Påmind. Please enter your email address and preferences!</p>
-          <Form updateFormContent={this.updateFormContent} formContent={this.state.formContent} />
-          <Debugger formContent={this.state.formContent} />
+          <Form
+            handleForm={() => this.content.handleForm()}
+            updateFormContent={this.updateFormContent}
+            formContent={this.state.formContent}
+          />
         </div>
-        <div className="app__background" />
-      </React.Fragment>
+        <Debugger
+          ref={(instance) => { this.content = instance; }}
+          formContent={this.state.formContent}
+        />
+      </div>
     );
   }
 }

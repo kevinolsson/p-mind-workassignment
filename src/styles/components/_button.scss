@@ -4,12 +4,18 @@
   border: 0;
   border-radius: 100px;
   color: $white;
+  display: inline-block;
   font-family: $serif-stack;
   height: 76px;
   margin: vr(1) 0;
   outline: 0;
+  text-align: center;
   text-decoration: none;
   width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &--primary {
     background-color: $primary;
@@ -21,6 +27,14 @@
 
   &--tertiary {
     background-color: $tertiary;
+    color: $dark;
+  }
+
+  &--small {
+    @include typi("h5");
+    height: 32px;
+    line-height: 32px;
+    max-width: 120px;
   }
 
   &--disabled {
@@ -28,6 +42,10 @@
     background-color: $primary-dark;
     color: $disabled-text;
     touch-action: none;
+
+    &:hover {
+      cursor: default;
+    }
   }
 
   &--active {
