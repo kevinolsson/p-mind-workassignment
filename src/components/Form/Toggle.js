@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class SubPreferenceToggle extends React.Component {
+class Toggle extends React.Component {
   handleChange = (event) => {
     const { name, checked } = event.target;
     this.props.updateFormContent(name, checked);
@@ -9,15 +9,15 @@ class SubPreferenceToggle extends React.Component {
 
   render() {
     return (
-      <label htmlFor="subPreferenceToggle">
+      <label htmlFor="toggle">
         <h4 className="form__title">I have a specific interest</h4>
         <div className="toggle">
           <input
-            checked={this.props.formContent.subPreferenceCheck}
-            id="subPreferenceToggle"
+            checked={this.props.formContent.subPreferenceToggle}
+            id="toggle"
             onChange={this.handleChange}
             type="checkbox"
-            name="subPreferenceCheck"
+            name="subPreferenceToggle"
           />
           <div className="toggle__slider" />
         </div>
@@ -26,11 +26,11 @@ class SubPreferenceToggle extends React.Component {
   }
 }
 
-SubPreferenceToggle.propTypes = {
+Toggle.propTypes = {
   updateFormContent: PropTypes.func,
   formContent: PropTypes.shape({
-    subPreferenceCheck: PropTypes.bool,
+    subPreferenceToggle: PropTypes.bool,
   }),
 };
 
-export default SubPreferenceToggle;
+export default Toggle;

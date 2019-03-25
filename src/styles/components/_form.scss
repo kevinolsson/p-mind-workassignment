@@ -1,4 +1,10 @@
 .form {
+  @include from(3) {
+    margin: 5% auto;
+    max-width: 640px;
+  }
+  margin: 12px;
+
   label {
     display: block;
     margin: vr(1.5) 0;

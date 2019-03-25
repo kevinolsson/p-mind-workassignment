@@ -1,7 +1,7 @@
 .app {
-  @include from(3) {
-    margin: 5% auto;
-    max-width: 640px;
+  @include from(6) {
+    grid-template-columns: 1fr 480px;
   }
-  margin: 12px;
+  display: grid;
+  grid-template-columns: 1fr;
 }

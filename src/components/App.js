@@ -7,7 +7,7 @@ class App extends React.Component {
     formContent: {
       email: '',
       preference: '',
-      subPreferenceCheck: false,
+      subPreferenceToggle: false,
       subPreference: '',
     },
   };
@@ -15,7 +15,7 @@ class App extends React.Component {
   updateFormContent = (name, value) => {
     const formContent = { ...this.state.formContent };
     formContent[name] = value;
-    if (name === 'preference' || (name === 'subPreferenceCheck' && value === false)) {
+    if (name === 'preference' || (name === 'subPreferenceToggle' && value === false)) {
       formContent.subPreference = '';
     }
     this.setState(
@@ -25,19 +25,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="wrapper">
-        <div className="app">
-          <h1>
-            <span className="secondary-color">Signup </span>
-            for our Newsletter
-          </h1>
-          <p>This is a work assignment for Påmind. Please enter your email address and preferences!</p>
-          <Form
-            handleForm={() => this.content.handleForm()}
-            updateFormContent={this.updateFormContent}
-            formContent={this.state.formContent}
-          />
-        </div>
+      <div className="app">
+        <Form
+          handleForm={() => this.content.handleForm()}
+          updateFormContent={this.updateFormContent}
+          formContent={this.state.formContent}
+        />
         <Debugger
           ref={(instance) => { this.content = instance; }}
           formContent={this.state.formContent}

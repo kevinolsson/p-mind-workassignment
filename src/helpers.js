@@ -8,11 +8,11 @@ export function validateButton(formContent) {
   const isEmailValid = validateEmail(formContent.email);
   const isPreferenceValid = (formContent.preference !== '') ? 1 : 0;
   let isSubPreferenceValid = null;
-  if (!formContent.subPreferenceCheck) {
+  if (!formContent.subPreferenceToggle) {
     isSubPreferenceValid = 1;
   } else {
     isSubPreferenceValid = (
-      formContent.subPreferenceCheck
+      formContent.subPreferenceToggle
       && isPreferenceValid
       && formContent.subPreference !== '') ? 1 : 0;
   }

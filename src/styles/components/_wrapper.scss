@@ -1,7 +1,0 @@
-.wrapper {
-  @include from(6) {
-    grid-template-columns: 1fr 480px;
-  }
-  display: grid;
-  grid-template-columns: 1fr;
-}
