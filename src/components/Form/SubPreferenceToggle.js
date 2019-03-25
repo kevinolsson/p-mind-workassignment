@@ -3,18 +3,8 @@ import PropTypes from 'prop-types';
 
 class SubPreferenceToggle extends React.Component {
   handleChange = (event) => {
-    let subPrefValue = '';
-    if (event.target.checked) {
-      subPrefValue = this.props.formContent.subPreference;
-    }
-
-    const formContent = {
-      email: this.props.formContent.email,
-      preference: this.props.formContent.preference,
-      subPreferenceCheck: event.target.checked,
-      subPreference: subPrefValue,
-    };
-    this.props.updateFormContent(formContent);
+    const { name, checked } = event.target;
+    this.props.updateFormContent(name, checked);
   }
 
   render() {
@@ -27,6 +17,7 @@ class SubPreferenceToggle extends React.Component {
             id="subPreferenceToggle"
             onChange={this.handleChange}
             type="checkbox"
+            name="subPreferenceCheck"
           />
           <div className="toggle__slider" />
         </div>
@@ -38,10 +29,7 @@ class SubPreferenceToggle extends React.Component {
 SubPreferenceToggle.propTypes = {
   updateFormContent: PropTypes.func,
   formContent: PropTypes.shape({
-    email: PropTypes.string,
-    preference: PropTypes.string,
     subPreferenceCheck: PropTypes.bool,
-    subPreference: PropTypes.string,
   }),
 };
 

@@ -4,13 +4,8 @@ import { validateEmail } from '../../helpers';
 
 class Preference extends React.Component {
   handleChange = (event) => {
-    const formContent = {
-      email: this.props.formContent.email,
-      preference: event.target.value,
-      subPreferenceCheck: this.props.formContent.subPreferenceCheck,
-      subPreference: '',
-    };
-    this.props.updateFormContent(formContent);
+    const { name, value } = event.target;
+    this.props.updateFormContent(name, value);
   }
 
   render() {
@@ -20,11 +15,11 @@ class Preference extends React.Component {
         <h4 className="form__title">Preference:</h4>
         <div className="form__dropdown">
           <select
-            defaultValue={this.props.formContent.preference}
+            value={this.props.formContent.preference}
             disabled={!isEmailValid}
-            required
             id="preference"
             onChange={this.handleChange}
+            name="preference"
           >
             <option value="" disabled hidden>Select preference</option>
             <option value="IT">IT</option>
@@ -43,8 +38,6 @@ Preference.propTypes = {
   formContent: PropTypes.shape({
     email: PropTypes.string,
     preference: PropTypes.string,
-    subPreferenceCheck: PropTypes.bool,
-    subPreference: PropTypes.string,
   }),
 };
 

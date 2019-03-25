@@ -10,7 +10,7 @@ class Form extends React.Component {
   handleForm = (event) => {
     event.preventDefault();
     this.props.handleForm();
-  }
+  };
 
   render() {
     const buttonDisabled = validateButton(this.props.formContent);

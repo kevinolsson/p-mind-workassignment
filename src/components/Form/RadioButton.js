@@ -3,13 +3,8 @@ import PropTypes from 'prop-types';
 
 class RadioButton extends React.Component {
   handleChange = (event) => {
-    const formContent = {
-      email: this.props.formContent.email,
-      preference: this.props.formContent.preference,
-      subPreferenceCheck: this.props.formContent.subPreferenceCheck,
-      subPreference: event.target.value,
-    };
-    this.props.updateFormContent(formContent);
+    const { name, value } = event.target;
+    this.props.updateFormContent(name, value);
   }
 
   render() {
@@ -36,12 +31,6 @@ RadioButton.propTypes = {
   updateFormContent: PropTypes.func,
   subject: PropTypes.string,
   subPreference: PropTypes.string,
-  formContent: PropTypes.shape({
-    email: PropTypes.string,
-    preference: PropTypes.string,
-    subPreferenceCheck: PropTypes.bool,
-    subPreference: PropTypes.string,
-  }),
 };
 
 

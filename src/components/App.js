@@ -12,13 +12,16 @@ class App extends React.Component {
     },
   };
 
-  updateFormContent = (value) => {
-    let formContent = { ...this.state.formContent };
-    formContent = value;
+  updateFormContent = (name, value) => {
+    const formContent = { ...this.state.formContent };
+    formContent[name] = value;
+    if (name === 'preference' || (name === 'subPreferenceCheck' && value === false)) {
+      formContent.subPreference = '';
+    }
     this.setState(
       prevState => ({ formContent }),
     );
-  }
+  };
 
   render() {
     return (

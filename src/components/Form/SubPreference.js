@@ -48,9 +48,7 @@ class SubPreference extends React.Component {
 SubPreference.propTypes = {
   updateFormContent: PropTypes.func,
   formContent: PropTypes.shape({
-    email: PropTypes.string,
     preference: PropTypes.string,
-    subPreferenceCheck: PropTypes.bool,
     subPreference: PropTypes.string,
   }),
 };
